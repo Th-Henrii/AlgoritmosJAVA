@@ -1,0 +1,24 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class ex016_LanchoneteGostosura {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        DecimalFormat decimalformat = new DecimalFormat("#,00");
+
+        double queijo = 50.00;
+        double presunto = 50.00;
+        double hambuerguer = 100.00;
+
+        System.out.println("Informe a quantidade de sanduiches a serem feitos: ");
+        double qtdSanduiches = scanner.nextDouble();
+
+        queijo = (qtdSanduiches / 1000) * 100;
+        presunto = (qtdSanduiches / 1000) * 100;
+        hambuerguer = (qtdSanduiches / 1000) * 100;
+
+        System.out.println("Presunto: "+decimalformat.format(presunto)+"kg");
+        System.out.println("Queijo: "+decimalformat.format(queijo)+"kg");
+        System.out.println("Hambuerguer: "+decimalformat.format(hambuerguer)+"kg");
+    }
+}
